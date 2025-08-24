@@ -3,7 +3,7 @@ import React from 'react'
 const Section6 = () => {
     return (
         <div>
-            <section className='flex flex-col sm:px-130 mt-20 items-center justify-center'>
+            {/* <section className='flex flex-col sm:px-130 mt-20 items-center justify-center'>
                 <div className='flex flex-col justify-center items-center gap-5'>
                     <img 
                         src="https://i.ibb.co/99bLZ2dz/IMG-20250613-WA0001-1.jpg" 
@@ -48,7 +48,7 @@ const Section6 = () => {
 </a>
 
                 </div>
-            </section>
+            </section> */}
         </div>
     )
 }

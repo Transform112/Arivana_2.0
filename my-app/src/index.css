@@ -15,7 +15,7 @@
 
 @plugin "daisyui"
   {
-  themes: dark --default, light --prefersdark, cupcake;
+  themes: light --default, light --prefersdark, cupcake;
 }
 
 

@@ -1,4 +1,5 @@
-import React from 'react'
+
+import { motion } from "motion/react";
 
 
 const testimonials = [
@@ -78,93 +79,177 @@ const testimonials = [
 
 const Section5 = () => {
   return (
-
-    <section className="w-full py-16 flex flex-col items-center bg-gray-50 ">
-      <div className='border-1 border-base-300 mt-20 p-1 rounded-full'>
-        <div id='testimonial' className=' sm:text-lg text-sm font-bold border-1 border-base-300 p-2 rounded-full text-[#474747]'> ✨ Testimonials </div>
-      </div>
-      <h2 className="text-2xl sm:text-4xl font-bold mb-8 text-center mt-8">What Our Users Say</h2>
-      <div className="w-full max-w-6xl px-4 flex flex-col gap-8">
-
-        <div className="overflow-hidden w-full py-5">
+    <motion.section
+      className="w-full py-16 flex flex-col items-center bg-gray-50 "
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
+      <motion.div
+        className='border-1 border-base-300 mt-20 p-1 rounded-full'
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7 }}
+      >
+        <motion.div
+          id='testimonial'
+          className='sm:text-lg text-sm font-bold border-1 border-base-300 p-2 rounded-full text-[#474747] flex justify-center items-center gap-2'
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        > <img src="asset 23.webp" alt="" className="w-8"/> Testimonials </motion.div>
+      </motion.div>
+      <motion.h2
+        className="text-2xl sm:text-4xl font-bold mb-8 text-center mt-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.1 }}
+      >What Our Users Say</motion.h2>
+      <motion.div
+        className="w-full max-w-6xl px-4 flex flex-col gap-8"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.7, delay: 0.2 }}
+      >
+        <motion.div
+          className="overflow-hidden w-full py-5"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+        >
           <div className="flex gap-8 min-w-max animate-carousel-scroll">
             {testimonials.slice(0, 4).map((t, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs">
-                <img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" />
+              <motion.div
+                key={idx}
+                className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: idx * 0.05 }}
+              >
+                <motion.img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} />
                 <p className="text-gray-700 italic mb-4 text-center">"{t.quote}"</p>
                 <div className="text-center">
                   <span className="font-semibold text-gray-900">{t.name}</span>
                   <div className="text-sm text-gray-500">{t.role}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-
             {testimonials.slice(0, 4).map((t, idx) => (
-              <div key={"dup1-" + idx} className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs">
-                <img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" />
+              <motion.div
+                key={"dup1-" + idx}
+                className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: idx * 0.05 }}
+              >
+                <motion.img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} />
                 <p className="text-gray-700 italic mb-4 text-center">"{t.quote}"</p>
                 <div className="text-center">
                   <span className="font-semibold text-gray-900">{t.name}</span>
                   <div className="text-sm text-gray-500">{t.role}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
-
-        <div className="overflow-hidden w-full py-5">
+        </motion.div>
+        <motion.div
+          className="overflow-hidden w-full py-5"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
           <div className="flex gap-8 min-w-max animate-carousel-scroll-right">
             {testimonials.slice(4, 8).map((t, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs">
-                <img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" />
+              <motion.div
+                key={idx}
+                className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: idx * 0.05 }}
+              >
+                <motion.img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} />
                 <p className="text-gray-700 italic mb-4 text-center">"{t.quote}"</p>
                 <div className="text-center">
                   <span className="font-semibold text-gray-900">{t.name}</span>
                   <div className="text-sm text-gray-500">{t.role}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-
             {testimonials.slice(4, 8).map((t, idx) => (
-              <div key={"dup2-" + idx} className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs">
-                <img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" />
+              <motion.div
+                key={"dup2-" + idx}
+                className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: idx * 0.05 }}
+              >
+                <motion.img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} />
                 <p className="text-gray-700 italic mb-4 text-center">"{t.quote}"</p>
                 <div className="text-center">
                   <span className="font-semibold text-gray-900">{t.name}</span>
                   <div className="text-sm text-gray-500">{t.role}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
-
-        <div className="overflow-hidden w-full py-5">
+        </motion.div>
+        <motion.div
+          className="overflow-hidden w-full py-5"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+        >
           <div className="flex gap-8 min-w-max animate-carousel-scroll">
             {testimonials.slice(8, 12).map((t, idx) => (
-              <div key={idx} className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs">
-                <img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" />
+              <motion.div
+                key={idx}
+                className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: idx * 0.05 }}
+              >
+                <motion.img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} />
                 <p className="text-gray-700 italic mb-4 text-center">"{t.quote}"</p>
                 <div className="text-center">
                   <span className="font-semibold text-gray-900">{t.name}</span>
                   <div className="text-sm text-gray-500">{t.role}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
-
             {testimonials.slice(8, 12).map((t, idx) => (
-              <div key={"dup3-" + idx} className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs">
-                <img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" />
+              <motion.div
+                key={"dup3-" + idx}
+                className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center min-w-[250px] max-w-xs"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: idx * 0.05 }}
+              >
+                <motion.img src={t.image} alt={t.name} className="w-16 h-16 rounded-full mb-4 object-cover border-1 border-gray-200" initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.7 }} />
                 <p className="text-gray-700 italic mb-4 text-center">"{t.quote}"</p>
                 <div className="text-center">
                   <span className="font-semibold text-gray-900">{t.name}</span>
                   <div className="text-sm text-gray-500">{t.role}</div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 }
 

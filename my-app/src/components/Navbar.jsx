@@ -25,7 +25,7 @@ const Navbar = () => {
   target="_blank" 
   rel="noopener noreferrer"
 >
-  <button className="bg-gradient-to-b from-gray-900 to-black py-4 px-8 rounded-full text-white sm:flex hidden">
+  <button className="cursor-pointer bg-gradient-to-b from-gray-900 to-black py-4 px-8 rounded-full text-white sm:flex hidden">
     Try Now
   </button>
 </a>
