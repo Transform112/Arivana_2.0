@@ -1,0 +1,156 @@
+import Head from "next/head";
+import { FeatureSection } from "@/components/sections/FeatureSection";
+import {
+  Header,
+  HeroSection,
+  TestimonialSection,
+  FaqSection,
+  Footer,
+  PricingSection,
+  LargeFeatureSection,
+  CtaSection,
+} from "../components/sections";
+import { generateConsultationMailto } from "@/config/email";
+
+import {
+  header,
+  faqs,
+  testimonials,
+  features,
+  pricing,
+  clients,
+  footer,
+} from "@/data";
+
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>WindMill</title>
+      </Head>
+      <Header
+        logo={header.logo}
+        links={header.links}
+        buttons={header.buttons}
+      />
+      <HeroSection
+        id="home"
+        badge={{
+          href: "#",
+          icon: "tabler:arrow-right",
+          label: "😻 Empowering Businesses ",
+        }}
+        title="Building Scalable Software Tailored to Your Needs"
+        description="From custom software and mobile apps to SaaS platforms and enterprise IT solutions, we deliver innovation that drives results."
+        buttons={[
+          {
+            href: generateConsultationMailto(),
+            label: "Book a Free Consultation",
+            color: "dark",
+          },
+          {
+            href: "#",
+            label: "Explore Our Services",
+            color: "transparent",
+            variant: "link",
+            icon: "tabler:arrow-right",
+          },
+        ]}
+        image={{
+          src: "./tablet-mockup.png",
+          alt: "Product Screenshot on Tablet",
+          className: "w-full h-auto",
+        }}
+        clientsLabel="Trusted by Businesses Across Industries"
+        clients={clients}
+      />
+      <FeatureSection
+        id="features"
+        title="Our Core Services"
+        description="We provide end-to-end technology solutions for startups, businesses, and enterprises. Whether you’re building from scratch or scaling your product, we’ve got you covered."
+        features={features}
+      />
+      <LargeFeatureSection
+        title="Stay on top of your business"
+        description="Service Highlights:"
+        list={features.slice(0, 3)}
+        image={{
+          src: "./mockup1.png",
+          alt: "Image",
+          className:
+            "w-full aspect-square object-contain rotate-6 hover:rotate-0 duration-300 ease-in-out",
+        }}
+      />
+      <LargeFeatureSection
+        reverse={true}
+        title="Stay Ahead with Smarter Software"
+        description="Service Highlights:"
+        list={features.slice(0, 3)}
+        image={{
+          src: "mockup2.png",
+          alt: "Image",
+          className:
+            "w-full aspect-square object-contain -rotate-6 hover:rotate-0 duration-300 ease-in-out",
+        }}
+      />
+      <PricingSection
+        id="pricing"
+        title="Pricing That Fits Your Needs"
+        description="Flexible plans for businesses of all sizes."
+        badge={{
+          leading: true,
+          icon: "tabler:credit-card",
+          label: "Plans",
+        }}
+        pricing={pricing}
+      />
+      <TestimonialSection
+        id="testimonials"
+        title="Love from our customers"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique
+        veritatis"
+        badge={{
+          leading: true,
+          icon: "tabler:heart",
+          label: "TESTIMONIALS",
+        }}
+        testimonials={testimonials}
+        button={{
+  
+          icon: "tabler:brand-x",
+          label: "Share Your Feedback on",
+          href:"https://twitter.com/intent/tweet?text=Check%20this%20out!&url=https://arivana.site",
+ 
+          color: "white",
+        }}
+      />
+      <FaqSection
+        id="faqs"
+        title="Frequently Asked Questions"
+        description="Here are some of our most frequently asked questions. If you have a question that isn't answered here, please feel free to contact us."
+        buttons={[
+          {
+            label: "Contact Support",
+            href: "#",
+            color: "primary",
+            variant: "link",
+            icon: "tabler:arrow-right",
+          },
+        ]}
+        faqs={faqs}
+      />
+      <CtaSection
+        title="Ready to get started?"
+        description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique"
+        buttons={[{ label: "Start for Free", href: "#", color: "dark" }]}
+      />
+      <Footer
+        id="footer"
+        copyright={footer.copyright}
+        logo={footer.logo}
+        social={footer.social}
+        links={footer.links}
+      />
+    </>
+  );
+}
