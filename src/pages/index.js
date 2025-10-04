@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>WindMill</title>
+        <title>Arivana</title>
       </Head>
       <Header
         logo={header.logo}
