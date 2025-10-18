@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { FeatureSection } from "@/components/sections/FeatureSection";
+import Timeline from "@/components/sections/Timeline";
 import {
   Header,
   HeroSection,
@@ -9,6 +10,7 @@ import {
   PricingSection,
   LargeFeatureSection,
   CtaSection,
+  
 } from "../components/sections";
 import { generateConsultationMailto } from "@/config/email";
 
@@ -93,7 +95,9 @@ export default function Home() {
             "w-full aspect-square object-contain -rotate-6 hover:rotate-0 duration-300 ease-in-out",
         }}
       />
-      <PricingSection
+
+      <Timeline />
+      {/* <PricingSection
         id="pricing"
         title="Pricing That Fits Your Needs"
         description="Flexible plans for businesses of all sizes."
@@ -103,7 +107,8 @@ export default function Home() {
           label: "Plans",
         }}
         pricing={pricing}
-      />
+      /> */}
+      
       <TestimonialSection
         id="testimonials"
         title="Love from our customers"
@@ -139,11 +144,13 @@ export default function Home() {
         ]}
         faqs={faqs}
       />
-      <CtaSection
+      
+      {/* <CtaSection
         title="Ready to get started?"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique"
         buttons={[{ label: "Start for Free", href: "#", color: "dark" }]}
-      />
+      /> */}
+
       <Footer
         id="footer"
         copyright={footer.copyright}

@@ -48,7 +48,7 @@ export function Header({ logo, links, buttons, className, ...rest }) {
           </ul>
         </div>
         <div className="flex gap-2 ml-auto">
-          <ThemeSwitch />
+          {/* <ThemeSwitch /> */}
           {buttons.map((button, index) => (
             <Button key={index} {...button} />
           ))}

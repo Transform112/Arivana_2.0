@@ -15,7 +15,7 @@ export function HeroSection({
 }) {
   return (
     <section {...rest}>
-      <div className="container px-4 mx-auto">
+      <div className="container px-4 mx-auto ">
         <div className="flex flex-col justify-center items-center min-h-screen">
           <div className="flex flex-col justify-center items-center gap-4 text-center max-w-3xl mx-auto mt-32 pb-12">
             <Badge {...badge} />
