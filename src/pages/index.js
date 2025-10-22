@@ -23,6 +23,7 @@ import {
   clients,
   footer,
 } from "@/data";
+import { timelineData } from "@/data/timeline";
 
 export default function Home() {
   return (
@@ -96,7 +97,7 @@ export default function Home() {
         }}
       />
 
-      <Timeline />
+      <Timeline data={timelineData} />
       {/* <PricingSection
         id="pricing"
         title="Pricing That Fits Your Needs"
