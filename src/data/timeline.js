@@ -121,8 +121,8 @@ export const timelineData = [
               Our Mission
             </h4>
             <p className="text-neutral-700 dark:text-neutral-300 text-xs md:text-sm italic">
-              "To empower businesses through innovative, scalable, and secure software solutions 
-              that drive growth and digital transformation."
+              &ldquo;To empower businesses through innovative, scalable, and secure software solutions 
+              that drive growth and digital transformation.&rdquo;
             </p>
           </div>
         </div>
