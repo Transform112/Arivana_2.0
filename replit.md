@@ -1,6 +1,14 @@
 # Overview
 
-This is a Next.js-based marketing website for Arivana (formerly "WindMill"), a software development agency. The site serves as a landing page showcasing the company's services, pricing, testimonials, and features. It's designed to attract potential clients and facilitate consultation requests through email. The website is built with modern web technologies including React, Next.js 14, TailwindCSS, and Radix UI components.
+This is a Next.js-based marketing website for Arivana (formerly "WindMill"), a software development agency. The site serves as a landing page showcasing the company's services, pricing, testimonials, and features. It's designed to attract potential clients and facilitate consultation requests through email. The website is built with modern web technologies including React, Next.js 14, TailwindCSS, Radix UI components, and Framer Motion for animations.
+
+# Recent Changes
+
+**October 22, 2025**: Integrated Aceternity UI Timeline component with scroll-triggered animations
+- Added Framer Motion library for advanced scroll animations
+- Implemented timeline section showcasing Arivana's journey (2022-2024)
+- Timeline features sticky headers, animated progress beam, and rich content cards
+- Positioned above testimonials section as a key storytelling element
 
 # User Preferences
 
@@ -24,8 +32,9 @@ Preferred communication style: Simple, everyday language.
 **Component Architecture**:
 - **Base Components**: Reusable UI primitives (Button, Badge, Tabs, Accordion) built on Radix UI
 - **Card Components**: Specialized display components (FeatureCard, PricingCard, TestimonialCard)
-- **Section Components**: Full-width page sections (Hero, Features, Pricing, Testimonials, FAQ, CTA)
+- **Section Components**: Full-width page sections (Hero, Features, Pricing, Testimonials, FAQ, CTA, Timeline)
 - **Utility Components**: Theme switching, social links, brand showcase
+- **Animated Components**: Timeline with Framer Motion scroll animations
 - Separation of concerns with components organized by type and responsibility
 
 **State Management**:
@@ -44,7 +53,8 @@ Preferred communication style: Simple, everyday language.
 **Static Content Management**:
 - All content stored in JavaScript modules under `src/data/`
 - Centralized data exports from `src/data/index.js`
-- Content includes: clients, features, FAQs, testimonials, pricing, header, footer
+- Content includes: clients, features, FAQs, testimonials, pricing, header, footer, timeline data
+- Timeline data stored separately in `src/data/timeline.js` with rich JSX content
 - No database or CMS - purely static content approach
 
 **Content Structure**:
@@ -110,6 +120,12 @@ Preferred communication style: Simple, everyday language.
 - **Radix UI** (`@radix-ui/react-accordion`): Accessible, unstyled accordion component
   - Used for FAQ section
   - Provides keyboard navigation and ARIA compliance out of the box
+
+## Animation Library
+- **Framer Motion** (`framer-motion`): Production-ready motion library for React
+  - Used for scroll-triggered animations in Timeline component
+  - Provides `useScroll`, `useTransform`, and `motion` components
+  - Enables smooth, performant animations tied to scroll position
 
 ## Icon System
 - **Iconify React** (`@iconify/react`): Universal icon framework
