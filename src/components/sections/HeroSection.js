@@ -37,7 +37,7 @@ export function HeroSection({
               
             </video>
           </div>
-          <div className="text-sm">{clientsLabel}</div>
+          <div className="text-sm mt-5">{clientsLabel}</div>
           <Brands clients={clients} />
         </div>
       </div>

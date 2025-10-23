@@ -6,7 +6,7 @@ export const features = [
   },
   {
     title: "SaaS & Product Development",
-    description: "CBuild and launch your own cloud-based platforms.",
+    description: "Build and launch your own cloud-based platforms.",
     icon: "tabler:stack",
   },
   {

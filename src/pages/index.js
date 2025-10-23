@@ -41,7 +41,7 @@ export default function Home() {
         badge={{
           href: "#",
           icon: "tabler:arrow-right",
-          label: "😻 Empowering Businesses ",
+          label: "Empowering Businesses ",
         }}
         title="Building Scalable Software Tailored to Your Needs"
         description="From custom software and mobile apps to SaaS platforms and enterprise IT solutions, we deliver innovation that drives results."

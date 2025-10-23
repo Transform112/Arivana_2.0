@@ -8,9 +8,9 @@ export function Footer({ copyright, logo, links, social, ...rest }) {
     <footer
       className="text-xl pt-6  
 bg-gradient-to-b
-from-[#6bd8eb2c]
-via-[#2562e72f]
-to-[#6365f110] dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-800 relative overflow-hidden"
+from-[#95dce90e]
+via-[#93b0f031]
+to-[#9ebcf451] dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-800 relative overflow-hidden"
       {...rest}
     >
       <div className="container px-4 mx-auto">
