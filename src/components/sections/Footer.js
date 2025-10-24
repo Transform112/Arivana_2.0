@@ -69,20 +69,16 @@ to-[#9ebcf451] dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-800 relat
             </ul>
 
           </div>
-          
-          
 
         </div>
-         
-        
+  
       </div>
 
       </div>
      
-    <div className="w-100 mt-20 relative ">
-      <img className=" opacity-5" src="/Arivana.png" />
+    <div className="w-100 mt-20 relative">
+      <img className="opacity-10 mx-auto" src="/Arivana.png" />
     </div>
-
 
     </footer>
   );
