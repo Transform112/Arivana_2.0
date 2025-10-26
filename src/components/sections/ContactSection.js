@@ -61,7 +61,7 @@ export function ContactSection() {
             Get In Touch
           </h2>
           <p className="text-base max-w-2xl mx-auto">
-            Have a question or want to work together? We'd love to hear from you.
+            Have a question or want to work together? We&apos;d love to hear from you.
           </p>
         </div>
 
@@ -73,7 +73,7 @@ export function ContactSection() {
                 <div className="absolute inset-0 bg-black dark:bg-white blur-2xl opacity-10 animate-pulse"></div>
               </div>
               <h3 className="text-3xl font-display font-semibold text-title">Message Sent!</h3>
-              <p className="text-base">Thank you for reaching out. We'll get back to you soon.</p>
+              <p className="text-base">Thank you for reaching out. We&apos;ll get back to you soon.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
