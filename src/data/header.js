@@ -10,10 +10,10 @@ export const header = {
       label: "Features",
       href: "#features",
     },
-    {
-      label: "Pricing",
-      href: "#pricing",
-    },
+    // {
+    //   label: "Pricing",
+    //   href: "#pricing",
+    // },
     {
       label: "Testimonials",
       href: "#testimonials",
