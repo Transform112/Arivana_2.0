@@ -118,6 +118,18 @@ The contact form maintains the same design language as the rest of the website:
 
 **Note**: The API route (`src/pages/api/contact.js`) is no longer needed as the form now calls Google Apps Script directly from the client side.
 
+## Navigation to Contact Form
+
+All contact-related buttons and links throughout the website now smoothly scroll to the contact form. These include:
+
+- **Header**: "Contact Us" button
+- **Hero Section**: "Book a Free Consultation" button
+- **Pricing Cards**: "Get started", "Start Your Project", "Contact sales" buttons
+- **FAQ Section**: "Contact Support" link
+- **Footer**: "Schedule a Demo" link
+
+All of these links use smooth scroll behavior to navigate to the contact form section (`#contact`).
+
 ## Troubleshooting
 
 1. **Form not submitting**: 
@@ -140,14 +152,3 @@ The contact form maintains the same design language as the rest of the website:
 - The Apps Script URL can be safely hardcoded as Apps Script web apps are designed to be publicly accessible
 - Works on any hosting platform since it doesn't require server-side API routes
 - Safe to push to GitHub since no sensitive environment variables are used
-
-## Contact Form Links
-
-The following links throughout the site now point to the contact form (`#contact`):
-- Header: "Contact Us" button
-- Hero Section: "Book a Free Consultation" button
-- Pricing Cards: "Get started", "Start Your Project", "Contact sales" buttons
-- FAQ Section: "Contact Support" link
-- Footer: "Schedule a Demo" link
-
-All of these links will smoothly scroll to the contact form when clicked.

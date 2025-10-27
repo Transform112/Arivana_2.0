@@ -9,8 +9,8 @@ export function Footer({ copyright, logo, links, social, ...rest }) {
       className="text-xl pt-6  
 bg-gradient-to-b
 from-[#95dce90e]
-via-[#93b0f070]
-to-[#9ebcf49e] dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-800 relative overflow-hidden"
+via-[#93b0f031]
+to-[#9ebcf451] dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-800 relative overflow-hidden"
       {...rest}
     >
       <div className="container px-4 mx-auto">
@@ -45,7 +45,13 @@ to-[#9ebcf49e] dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-800 relat
           <div>
             <h3 className="font-semibold mb-3">Contact</h3>
             <ul className="space-y-2 text-gray-600 text-lg">
-              <li><a href="#contact">Schedule a Demo</a></li>
+              <li><a href="#contact" onClick={(e) => {
+                e.preventDefault();
+                const element = document.querySelector("#contact");
+                if (element) {
+                  element.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+              }}>Schedule a Demo</a></li>
             </ul>
           </div>
 
@@ -69,16 +75,20 @@ to-[#9ebcf49e] dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-800 relat
             </ul>
 
           </div>
+          
+          
 
         </div>
-  
+         
+        
       </div>
 
       </div>
      
-    <div className="w-100 mt-20 relative">
-      <img className="opacity-10 mx-auto" src="/Arivana.png" />
+    <div className="w-100 mt-20 relative ">
+      <img className=" opacity-5" src="/Arivana.png" />
     </div>
+
 
     </footer>
   );

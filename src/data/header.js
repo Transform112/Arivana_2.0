@@ -1,3 +1,4 @@
+import { generateConsultationMailto } from "@/config/email";
 export const header = {
   logo: {
     src: "./logo-mark.png",
@@ -9,10 +10,10 @@ export const header = {
       label: "Features",
       href: "#features",
     },
-    // {
-    //   label: "Pricing",
-    //   href: "#pricing",
-    // },
+    {
+      label: "Pricing",
+      href: "#pricing",
+    },
     {
       label: "Testimonials",
       href: "#testimonials",

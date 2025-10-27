@@ -18,11 +18,26 @@ export function Button({
     { "size-4": size === "small" },
     { "group-hover:translate-x-1 duration-100 ease-in-out": variant === "link" }
   );
+  const handleClick = (e) => {
+    if (onClick) {
+      onClick(e);
+    }
+    
+    // Add smooth scroll behavior for anchor links
+    if (href && href.startsWith("#")) {
+      e.preventDefault();
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  };
+
   const Tag = href ? "a" : "button";
   return (
     <Tag
       href={href}
-      onClick={onClick}
+      onClick={handleClick}
       className={cn(
         "group inline-flex gap-2 items-center rounded-full leading-none duration-200 ease-in-out",
         {

@@ -13,6 +13,7 @@ import {
   ContactSection,
   
 } from "../components/sections";
+import { generateConsultationMailto } from "@/config/email";
 
 import {
   header,
@@ -149,7 +150,7 @@ export default function Home() {
       {/* <CtaSection
         title="Ready to get started?"
         description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis similique"
-        buttons={[{ label: "Start for Free", href: "#contact", color: "dark" }]}
+        buttons={[{ label: "Start for Free", href: "#", color: "dark" }]}
       /> */}
       <ContactSection />
 

@@ -40,7 +40,16 @@ export function Header({ logo, links, buttons, className, ...rest }) {
                     ? "text-sm font-normal text-base-600 dark:text-base-400 hover:bg-base-100 dark:hover:bg-base-950 py-3 px-4 rounded-md"
                     : "text-sm font-normal text-base-600 dark:text-base-400 hover:text-base-800 dark:hover:text-base-300"
                 }
-                onClick={() => setOpen(false)}
+                onClick={(e) => {
+                  if (link.href.startsWith("#")) {
+                    e.preventDefault();
+                    const element = document.querySelector(link.href);
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                  }
+                  setOpen(false);
+                }}
               >
                 {link.label}
               </a>
