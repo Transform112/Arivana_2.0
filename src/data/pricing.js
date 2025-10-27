@@ -16,7 +16,7 @@ export const pricing = [
     ],
     button: {
       label: "Get started",
-      href: "#",
+      href: "#contact",
       color: "light",
       icon: "tabler:arrow-right",
     },
@@ -38,7 +38,7 @@ export const pricing = [
     ],
     button: {
       label: "Start Your Project",
-      href: "#",
+      href: "#contact",
       icon: "tabler:rocket",
     },
   },
@@ -59,7 +59,7 @@ export const pricing = [
     ],
     button: {
       label: "Contact sales",
-      href: "#",
+      href: "#contact",
       color: "light",
       icon: "tabler:mail",
     },

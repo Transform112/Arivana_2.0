@@ -45,7 +45,7 @@ to-[#9ebcf49e] dark:bg-gradient-to-t dark:from-slate-900 dark:to-slate-800 relat
           <div>
             <h3 className="font-semibold mb-3">Contact</h3>
             <ul className="space-y-2 text-gray-600 text-lg">
-              <li><a href="#">Schedule a Demo</a></li>
+              <li><a href="#contact">Schedule a Demo</a></li>
             </ul>
           </div>
 

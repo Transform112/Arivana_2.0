@@ -20,28 +20,39 @@ export function ContactSection() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
+      // Replace this URL with your Google Apps Script URL after deployment
+      // You can keep this hardcoded since Apps Script URLs are public
+      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzD15YltEzDtZchBRwSeC5kXUmZdxP6QrZk2iOhsYHwi6ff3d_z6CnpYFG0L1pG3yO3/exec";
+
+      const formDataToSend = new URLSearchParams();
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("email", formData.email);
+      formDataToSend.append("subject", formData.subject);
+      formDataToSend.append("message", formData.message);
+      formDataToSend.append("timestamp", new Date().toISOString());
+
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: "POST",
+        body: formDataToSend,
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
-        body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
-
-      if (response.ok) {
+      // Check if response is ok or if it's a redirect (which is normal for Apps Script)
+      const data = await response.text();
+      
+      // If the response text contains "success" or is a valid JSON, it worked
+      if (response.ok || data.includes("success") || data.includes("SUCCESS")) {
         setStatus("success");
         setFormData({ name: "", email: "", subject: "", message: "" });
         setTimeout(() => setStatus("idle"), 5000);
       } else {
-        setStatus("error");
-        setErrorMessage(data.error || "Something went wrong. Please try again.");
-        setTimeout(() => setStatus("idle"), 5000);
+        throw new Error("Failed to send message");
       }
     } catch (error) {
       setStatus("error");
-      setErrorMessage("Network error. Please check your connection and try again.");
+      setErrorMessage("Failed to send message. Please try again or contact us directly.");
       setTimeout(() => setStatus("idle"), 5000);
     }
   };
@@ -65,7 +76,7 @@ export function ContactSection() {
           </p>
         </div>
 
-        <div className="bg-base-50 dark:bg-base-900 rounded-3xl border border-base-300 dark:border-base-700 shadow-lg hover:shadow-xl p-8 md:p-12 transform transition-all duration-500 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-200">
+        <div className="bg-base-50 dark:bg-base-900 rounded-3xl border border-base-300 dark:border-base-700 shadow-lg hover:shadow-xl p-8 md:p-12 transform transition-all duration-500 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-200 max-w-[95%] mx-auto md:max-w-[60%] lg:max-w-[60%]">
           {status === "success" ? (
             <div className="text-center py-12 space-y-6 animate-in fade-in zoom-in duration-500">
               <div className="relative inline-block">

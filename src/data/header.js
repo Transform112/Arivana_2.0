@@ -1,4 +1,3 @@
-import { generateConsultationMailto } from "@/config/email";
 export const header = {
   logo: {
     src: "./logo-mark.png",
@@ -27,7 +26,7 @@ export const header = {
     
     {
       label: "Contact Us",
-      href: generateConsultationMailto(),
+      href: "#contact",
      
       color: "dark",
       size: "small",
